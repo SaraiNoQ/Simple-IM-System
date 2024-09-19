@@ -17,7 +17,7 @@ func NewUser(conn net.Conn) *User {
 	userAddr := conn.RemoteAddr().String()
 
 	user := &User{
-		Name: fmt.Sprintf("客户: %s", userAddr),
+		Name: fmt.Sprintf("客户%s", userAddr[len(userAddr)-5:]),
 		Addr: userAddr,
 		C:    make(chan string),
 		conn: conn,

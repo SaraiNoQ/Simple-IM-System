@@ -20,10 +20,10 @@ for (let i = 0; i < numRequests; i++) {
 
     client.on('data', (data) => {
         // 处理服务器的响应
-        console.log(`Received: ${data}`);
+        console.log(`Received+${i + 1}: ${data}`);
 
         // 关闭连接
-        client.destroy();
+        // client.destroy();
     });
 
     client.on('close', () => {
