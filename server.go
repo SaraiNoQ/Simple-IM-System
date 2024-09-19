@@ -65,7 +65,7 @@ func (this *Server) Handler(conn net.Conn) {
 	// Broadcasting Online Info
 	this.BroadCast(user, "已上线! ")
 
-	// BLOCKING
+	// BLOCKING, KEEP USER CASE ALIVE!
 	select {}
 }
 

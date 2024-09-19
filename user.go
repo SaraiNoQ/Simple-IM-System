@@ -13,6 +13,7 @@ type User struct {
 }
 
 // User Class init function
+// While creating a user, a goroutine was started. So we need to keep the User Case Alive!
 func NewUser(conn net.Conn) *User {
 	userAddr := conn.RemoteAddr().String()
 
